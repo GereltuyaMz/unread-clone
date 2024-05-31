@@ -1,0 +1,63 @@
+@media only screen and (max-width: 800px) {
+	.nav-left,
+	.nav-right {
+		display: none;
+	}
+
+	.mobile-menu {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+	}
+
+	.mobile-menu-items {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+	}
+
+	.fa-magnifying-glass {
+		color: white;
+		font-size: 20px;
+	}
+
+	.hero-image {
+		display: none;
+	}
+
+	.hero {
+		margin-left: 25px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.margin-auto {
+		max-width: 1600px;
+		margin: auto;
+	}
+
+	header {
+		height: 90vh;
+	}
+
+	.burger-menu {
+		margin-right: 11rem;
+	}
+
+	.editors-choice {
+		position: absolute;
+		top: -60%;
+		z-index: 5;
+		width: 100%;
+	}
+
+	.article-img-style {
+		width: 300px;
+		height: 430px;
+	}
+
+	.editors-choice h3 {
+		padding-left: 10rem;
+	}
+}
