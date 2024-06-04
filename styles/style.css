@@ -410,21 +410,21 @@ input:focus {
 	padding: 0.8rem;
 }
 
-.this-week-article:nth-child(even) {
+.article-container:nth-child(even) {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	gap: 0.8rem;
-	margin-top: 2rem;
-	transition: all ease-in 0.3s;
-	translate: 0 0;
+	margin-top: 3rem;
 }
 
-.this-week-article:nth-child(odd) {
+.article-container:nth-child(odd) {
 	display: flex;
 	flex-direction: column;
-	gap: 0.8rem;
+	align-items: flex-start;
 	margin-top: 2rem;
+}
+
+.this-week-article {
 	transition: all ease-in 0.3s;
 	translate: 0 0;
 }
@@ -432,11 +432,6 @@ input:focus {
 .this-week-article:hover {
 	translate: 0 -5px;
 }
-
-/* .article-img-container {
-	width: 100%;
-	height: 100%;
-} */
 
 .this-week .article-img {
 	background-position: center;
@@ -469,6 +464,7 @@ input:focus {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	margin-bottom: 0.8rem;
 }
 
 .article-author img {
@@ -552,4 +548,98 @@ input:focus {
 .dot-blue {
 	width: 7px;
 	height: 7px;
+}
+
+/*********** prev-weeks ************/
+.prev-weeks {
+	padding: 3rem 0;
+	gap: 20px;
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	grid-template-rows: 200px 50px 200px;
+	grid-gap: 16px;
+}
+
+.image-container {
+	background-image: url("https://unread.today/files/44/fb22ab394a1b1ed66b2cf9839bdf4f2a_square.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 200px;
+	height: 150px;
+}
+
+.highlight {
+	grid-column: 1 / 2 span;
+	grid-row: 1 / 2 span;
+}
+
+.md {
+	grid-row: 2 / span 2;
+}
+
+.prev-week-article {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	border-radius: 20px;
+}
+
+.prev-week-article-1 {
+	background-image: url("https://unread.today/files/ed579b98-8b6a-46a5-a2db-38fafd069ab2/530e016dcc4b4b2281684521a7a623b4_square.jpg");
+}
+.prev-week-article-2 {
+	background-image: url("https://unread.today/files/44/75288f9a6f654884726db5e0458cbdef_square.jpg");
+}
+.prev-week-article-3 {
+	background-image: url("https://unread.today/files/2f1c26d7-6f24-46c8-9307-bbfecc8b41b1/9dc16b608bc499d627cb6675b231a0ff_square.png");
+}
+.prev-week-article-4 {
+	background-image: url("https://unread.today/files/2f1c26d7-6f24-46c8-9307-bbfecc8b41b1/87c6713d7876ac1899e20c13ac8b1974_square.jpg");
+}
+.prev-week-article-5 {
+	background-image: url("https://unread.today/files/ab36d712-71ff-4ad9-896e-6ebb29ee892b/12e9783329d71a9f343d203c052e4d98_square.jpg");
+}
+.prev-week-article-6 {
+	background-image: url("https://unread.today/files/dca82359-3f6e-4c03-99ef-ef493c68a7aa/ceeea287bfedd20b61f06a236854b5ac_square.jpg");
+}
+.prev-week-article-7 {
+	background-image: url("https://unread.today/files/e8e08e0b-2c4f-4f62-83e2-43a512c166d6/bae4a1bc2f0c3265addd5badd790488e_square.png");
+}
+
+.prev-week-article-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.5rem;
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 0 0 20px 20px;
+}
+
+.prev-week-article-content p:first-child {
+	font-size: 0.7rem;
+	margin-bottom: 0.3rem;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.prev-week-article-content p:nth-child(2) {
+	color: white;
+	font-size: 0.8rem;
+}
+
+.article-time {
+	text-align: center;
+	font-weight: 300;
+	width: 50px;
+	padding: 0.3rem 0;
+	font-size: 0.7rem;
+	border-radius: 5px;
+	color: white;
+	position: absolute;
+	right: 4%;
+	top: -10%;
+	backdrop-filter: blur(10px);
+	background-color: rgba(0, 0, 0, 0.3);
 }
