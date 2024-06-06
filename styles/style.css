@@ -658,7 +658,6 @@ main {
 /*********** footer ************/
 
 footer {
-	/* height: 70vh; */
 	padding: 5rem 0;
 }
 
@@ -677,13 +676,22 @@ footer {
 .contact-box {
 	display: flex;
 	gap: 2rem;
-	width: fit-content;
 	padding: 2rem;
 	border-radius: 20px;
 	margin-bottom: 2rem;
 	background-image: url("https://unread.today/img/btn-black.png");
 	background-position: center;
 	background-size: cover;
+	transition: all ease-in-out 0.2s;
+}
+
+.contact-box:hover {
+	translate: 5px 0;
+}
+
+.contact-box:hover .arrow-icon {
+	border: 8px solid #16304f;
+	background-color: #0078f6;
 }
 
 .contact-box h6 {
@@ -699,9 +707,12 @@ footer {
 
 .arrow-icon {
 	background-color: black;
-	width: fit-content;
+	/* width: fit-content; */
 	padding: 0.5rem 0.8rem;
+	/* width: 15px; */
 	border-radius: 50%;
+	transition: all ease-in-out 0.2s;
+	border: 5px solid #16304f;
 }
 
 .arrow-icon .fa-chevron-right {
@@ -780,6 +791,7 @@ footer {
 
 .website p:last-child {
 	color: white;
+	transition: all ease-in 0.2s;
 }
 
 .footer-titles h3:last-child {
@@ -797,4 +809,21 @@ footer {
 .footer-social-links i {
 	color: rgba(255, 255, 255, 0.2);
 	font-size: 36px;
+}
+
+.footer-menu-list-1 p,
+.footer-menu-list-2 p {
+	transition: all ease-in 0.2s;
+}
+
+.footer-menu-list-1 p:hover,
+.footer-menu-list-2 p:hover {
+	translate: 5px;
+	cursor: pointer;
+	color: white;
+}
+
+.website p:last-child:hover {
+	translate: 5px;
+	cursor: pointer;
 }
